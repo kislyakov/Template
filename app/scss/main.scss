@@ -1,0 +1,27 @@
+body {
+  font-family: 'Fira Sans', sans-serif;
+  background: #f6f6f6;
+}
+
+//variable
+$height-footer: 50px;
+$container:     940px;
+
+//color var
+$grey:  #727272;
+$black: #414141;
+$white: #f6f6f6;
+$blue:  #33c1e3;
+$red:   #e85f61;
+
+
+//settings
+@import "settings/mixin";
+@import "settings/normalize";
+@import "settings/settings";
+
+//element
+
+
+//adaptive
+@import "adaptive/media";

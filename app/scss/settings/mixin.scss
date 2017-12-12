@@ -1,0 +1,59 @@
+%ClearFix {
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+@mixin inline-block($void) {
+  display: inline-block;
+  vertical-align: $void;
+}
+
+@mixin font($type) {
+  @if $type == regular {
+    font-weight: 400;
+  }
+
+  @else if $type == light {
+    font-weight: 300;
+  }
+
+  @else if $type == bold {
+    font-weight: bold;
+  }
+
+}
+
+
+@function rem($type) {
+  @return $type / 16px + 0rem
+}
+
+
+//adaptive media
+@mixin desktop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+
+@mixin phones {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
